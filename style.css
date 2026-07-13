@@ -1,0 +1,237 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/back-image.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 140px;
+    cursor: pointer;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+.login-btn{
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg,#df4881,#c430d7);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: .5s;
+}
+
+.btn:hover{
+    border-top-right-radius: 30px;
+}
+
+/* ================= CONTENT ================= */
+
+.content{
+    margin-top: 10%;
+    max-width: 600px;
+}
+
+.content h1{
+    font-size: clamp(40px,7vw,70px);
+    color: #222;
+    line-height: 1.1;
+}
+
+.content p{
+    margin: 15px 0 30px;
+    color: #333;
+    line-height: 1.7;
+    animation-delay: .5s;
+}
+
+.content .btn{
+    padding: 15px 45px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+
+/* ================= IMAGE ================= */
+
+.feature-img{
+    width: 100%;
+    max-width: 530px;
+    position: absolute;
+    bottom: 0;
+    right: 8%;
+}
+
+.feature-img.anim{
+    animation-delay: 1.5s;
+}
+
+/* ================= ANIMATION ================= */
+
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup .5s linear forwards;
+}
+
+@keyframes moveup{
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width:992px){
+
+.hero{
+    padding:30px 6%;
+}
+
+.content{
+    max-width:500px;
+}
+
+.feature-img{
+    max-width:420px;
+    right:5%;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+.hero{
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+nav ul li{
+    margin:8px 0;
+}
+
+nav div{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.content{
+    margin-top:40px;
+    max-width:100%;
+}
+
+.content h1{
+    font-size:42px;
+}
+
+.content p{
+    font-size:15px;
+}
+
+.content .btn{
+    padding:14px 35px;
+}
+
+.feature-img{
+    position:relative;
+    display:block;
+    margin:50px auto 0;
+    right:0;
+    bottom:0;
+    width:100%;
+    max-width:340px;
+}
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width:480px){
+
+.logo{
+    width:120px;
+}
+
+.content h1{
+    font-size:34px;
+}
+
+.content p{
+    font-size:14px;
+}
+
+.btn{
+    padding:12px 24px;
+    font-size:13px;
+}
+
+nav div{
+    flex-direction:column;
+    align-items:center;
+}
+
+.feature-img{
+    max-width:280px;
+}
+
+}
